@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(bash scripts/proverka.sh:*)",
+      "Bash(python3 -I scripts/:*)",
+      "Bash(ffprobe:*)",
+      "Bash(open media/:*)",
+      "Bash(open -e .env)",
+      "Bash(open -R .env)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Edit(.env)",
+      "Edit(**/.env)",
+      "Write(.env)",
+      "Write(**/.env)",
+      "Read(**/*.pem)",
+      "Read(**/credentials*)",
+      "Read(**/secrets*)",
+      "Bash(cat .env:*)",
+      "Bash(cat *.env:*)",
+      "Bash(less .env:*)",
+      "Bash(head .env:*)",
+      "Bash(tail .env:*)",
+      "Bash(grep * .env:*)",
+      "Bash(rm -rf:*)",
+      "Bash(rm -fr:*)",
+      "Bash(sudo:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(scp:*)",
+      "Bash(sftp:*)",
+      "Bash(rsync:*)",
+      "Bash(nc:*)",
+      "Bash(ssh:*)",
+      "Bash(ftp:*)",
+      "Bash(python3 -c:*)",
+      "Bash(python -c:*)",
+      "Bash(node -e:*)",
+      "Bash(perl -e:*)",
+      "Bash(ruby -e:*)",
+      "Bash(bash -c:*)",
+      "Bash(sh -c:*)",
+      "Bash(eval:*)",
+      "Bash(gh:*)",
+      "Bash(*| bash*)",
+      "Bash(*| sh*)",
+      "Bash(*|bash*)",
+      "Bash(*|sh*)",
+      "Bash(*--dangerously-skip-permissions*)",
+      "Bash(git push:*)",
+      "Bash(git remote add:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git -c:*)",
+      "Bash(git config core.hooksPath:*)",
+      "Bash(git config*hooksPath*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git clean:*)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|clear|resume",
+        "hooks": [
+          { "type": "command", "command": "bash \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/start.sh\"" }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "type": "command", "command": "bash \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/marshrut.sh\"" }
+        ]
+      }
+    ]
+  }
+}

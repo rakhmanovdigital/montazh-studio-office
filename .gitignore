@@ -1,0 +1,33 @@
+# --- сейф ключей: в git никогда ---
+.env
+.env.*
+*.pem
+*.key
+credentials*
+secrets*
+service-account*.json
+
+# --- видео, звук, картинки работы: в git никогда ---
+media/
+*.mp4
+*.mov
+*.m4v
+*.mkv
+*.webm
+*.mp3
+*.m4a
+*.wav
+*.aac
+*.ogg
+*.jpg
+*.jpeg
+*.png
+*.heic
+*.gif
+
+# --- служебное ---
+.DS_Store
+__pycache__/
+studio/.napominanie
+studio/.tmp/
+.claude/settings.local.json

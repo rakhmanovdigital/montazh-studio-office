@@ -1,0 +1,13 @@
+{
+ "_chto_eto": "Пример рецепта ролика. Директор/навык montazh пишет такой файл в clients/<клиент>/recepty/R-001.json",
+ "pasport": "clients/<клиент>/pasport.json",
+ "vyhod": "media/gotovo/<клиент>/R-001.mp4",
+ "kuski": [
+  {"fajl": "media/ishodniki/<клиент>/IMG_0001.MOV", "s": 1.2, "po": 6.8},
+  {"fajl": "media/ishodniki/<клиент>/IMG_0002.MOV", "s": 0.0, "po": 4.5}
+ ],
+ "zagolovok": {"tekst": "3 ошибки, из-за которых …", "s": 0, "po": 2.5},
+ "muzyka": null,
+ "titry": true,
+ "yazyk": "ru"
+}

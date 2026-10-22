@@ -1,0 +1,16 @@
+{
+ "klient": "",
+ "opisanie": "Стиль одной фразой — её словами (заполнить после разбора и разговора)",
+ "perehod": {"tip": "cut", "dlit": 0.25, "_varianty": "cut · fade · dissolve · slideleft · slideup · wipeleft · circleopen · zoomin · smoothup · pixelize · radial"},
+ "zum": {"vkl": false, "sila": 1.12, "kazhdye_sek": 2.5},
+ "cvet": {"kontrast": 1.05, "nasyshchennost": 1.1, "yarkost": 0.0},
+ "zvuk": {"loudness": -14, "muzyka_gromkost": 0.15},
+ "titry": {
+  "rezhim": "karaoke", "_rezhimy": "karaoke — фраза, текущее слово подсвечено · po-slovu — по одному слову · fraza — фраза целиком",
+  "slov": 3, "shrift": "Montserrat", "ves": 900, "razmer": 84,
+  "cvet": "#FFFFFF", "akcent": "#FFE600", "obvodka": "#000000", "obvodka_px": 6, "ten": true,
+  "polozhenie": 0.68, "registr": "upper", "fon_plashka": null, "anim": "pop"
+ },
+ "zagolovok": {"fon": "#FFE600", "cvet": "#111111", "shrift": "Montserrat", "razmer": 92, "polozhenie": 0.16},
+ "etalon": {}
+}
